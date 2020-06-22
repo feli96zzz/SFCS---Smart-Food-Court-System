@@ -16,9 +16,9 @@ if(isset($_POST["categoryhome"])){
 					<!-- NAV -->
 					<ul class='main-nav nav navbar-nav'>
                     <li class='active'><a href='index.php'>Home</a></li>
-                    <li><a href='store.php'>Electronics</a></li>
+                    <li><a href='store.php'>Noodles</a></li>
 	";
-	if(mysqli_num_rows($run_query) > 0){
+	if(mysqli_num_rows($run_query) > -1){
 		while($row = mysqli_fetch_array($run_query)){
 			$cid = $row["cat_id"];
 			$cat_name = $row["cat_title"];
