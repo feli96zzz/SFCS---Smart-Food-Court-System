@@ -127,7 +127,6 @@ session_start();
 						<li><a href="#"><i class="fa fa-map-marker"></i>Ho Chi Minh</a></li>
 					</ul>
 					<ul class="header-links pull-right">
-						<!-- kiem tra xung dot -->
 						<li><?php
                              include "db.php";
                             if(isset($_SESSION["uid"])){
