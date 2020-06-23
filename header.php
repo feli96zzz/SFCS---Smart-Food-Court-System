@@ -127,7 +127,7 @@ session_start();
 						<li><a href="#"><i class="fa fa-map-marker"></i>Bangalore</a></li>
 					</ul>
 					<ul class="header-links pull-right">
-						<li><a href="#"><i class="fa fa-inr"></i> INR</a></li>
+						<!-- xoa tren github -->
 						<li><?php
                              include "db.php";
                             if(isset($_SESSION["uid"])){
