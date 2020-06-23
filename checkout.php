@@ -178,6 +178,20 @@ span.price {
 					</div>
 					<label><input type="CHECKBOX" name="q" class="roomselect" value="conform" required> Shipping address same as billing
 					</label>';
+
+					// add something
+						// <form action="./checkout.php">
+						//   <label for="Payment">Choose Paymen method:</label>
+						//   <select name="Method" id="Payment">
+						//     <option value="acount">Acount</option>
+						//     <option value="online">Online</option>
+						//   </select>
+						//   <br><br>
+						//   <input type="submit" value="Submit">
+						// </form>
+
+
+					// 
 					$i=1;
 					$total=0;
 					$total_count=$_POST['total_count'];
@@ -197,7 +211,6 @@ span.price {
 						";
 						$i++;
 					}
-					
 				echo'	
 				<input type="hidden" name="total_count" value="'.$total_count.'">
 					<input type="hidden" name="total_price" value="'.$total.'">
@@ -281,7 +294,7 @@ span.price {
 			<!-- container -->
 			<div class="container">
 				<!-- row -->
-				<div class="row">
+				<!-- <div class="row">
 					<div class="col-md-12">
 						<div class="newsletter">
 							<p>Sign Up for the <strong>NEWSLETTER</strong></p>
@@ -304,7 +317,7 @@ span.price {
 								</li>
 							</ul>
 						</div>
-					</div>
+					</div> -->
 				</div>
 				<!-- /row -->
 			</div>

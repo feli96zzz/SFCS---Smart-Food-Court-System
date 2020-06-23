@@ -11,7 +11,7 @@ session_start();
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-		<title>SFCS - Smart Food Court System</title>
+		<title>BK Food Court</title>
 
 		<!-- Google font -->
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
@@ -121,11 +121,13 @@ session_start();
 			<!-- TOP HEADER -->
 			<div id="top-header">
 				<div class="container">
+
 					<ul class="header-links pull-left">
 						<li><a href="#"><i class="fa fa-phone"></i> 1900 9001</a></li>
 						<li><a href="#"><i class="fa fa-envelope-o"></i> feedback@vn.SFCS.com</a></li>
 						<li><a href="#"><i class="fa fa-map-marker"></i>Ho Chi Minh</a></li>
 					</ul>
+
 					<ul class="header-links pull-right">
 						<li><?php
                              include "db.php";
@@ -176,8 +178,10 @@ session_start();
 						<!-- LOGO -->
 						<div class="col-md-3">
 							<div class="header-logo">
+
 									<a href="http://localhost/online-shopping-system-master/"><img class="tlogo"WIDTH=100 HEIGHT=100 src="img/logoFoodCourt.png" alt=""/></a>
-								</a>
+
+						
 							</div>
 						</div>
 						<!-- /LOGO -->
@@ -186,6 +190,7 @@ session_start();
 						<div class="col-md-6">
 							<div class="header-search">
 								<form>
+
 									<select class="input-select">
 										<option value="0">All Categories</option>
 										<option value="1">Noodles</option>
@@ -195,6 +200,7 @@ session_start();
 										<option value="1">Beverages</option>
 										<option value="1">Snacks</option>
 									</select>
+
 									<input class="input" id="search" type="text" placeholder="Search here">
 									<button type="submit" id="search_btn" class="search-btn">Search</button>
 								</form>
@@ -207,7 +213,7 @@ session_start();
 							<div class="header-ctn">
 								<!-- Wishlist -->
 								<div>
-									<a href="https://github.com/puneethreddyhc">
+									<a href="https://github.com/feli96zzz/SFCS---Smart-Food-Court-System">
 										<i class="fa fa-github"></i>
 										<span>Github</span>
 										

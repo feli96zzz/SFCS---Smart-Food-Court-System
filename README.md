@@ -1,10 +1,6 @@
-> ### Any DBMS OR WEB TECHNOLOGIES (php, django, angular or react) or MachineLearning projects with installation support and code explaination for Premium contact phone: +919535688928 gmail: puneethreddy951@gmail.com
 
-# online-shopping-with-advanced-admin-page
-Updated version
-
-
-online shopping system is a [DBMS project] with both admin and user layouts.
+### Smart Food Court
+***
 
 # Installation
 
@@ -12,12 +8,7 @@ online shopping system is a [DBMS project] with both admin and user layouts.
 
 2. Open XAMPP Control panal and start [apache] and [mysql] .
 
-3. Download project from github(https://github.com/PuneethReddyHC/online-shopping-system-with-advanced-admin-page.git)  
-    OR follow gitbash commands
-    
-    i>cd C:\\xampp\htdocs\
-    
-    ii>git clone https://github.com/PuneethReddyHC/online-shopping-system-with-advanced-admin-page.git
+3. Download project or clone from this repository
     
 4. extract files in C:\\xampp\htdocs\.
 
@@ -29,27 +20,15 @@ online shopping system is a [DBMS project] with both admin and user layouts.
 
 8. after creating database name click on import.
 
-9. browse the file in directory[online-shopping-system-with-advanced-admin-page/database/onlineshop.sql].
+9. browse the file in directory [database/onlineshop.sql].
 
 10. after importing successfully.
 
-11. open any browser and type http://localhost/online-shopping-system-with-advanced-admin-page-master.
+11. open any browser and type SFCS---Smart-Food-Court-System
 
 12. first register and then login
 
 13. admin login details  Email=admin@gmail.com and Password=123456789.
-
-## If you like my project 
-Bye me Cup of coffee
-
-### Google pay or phonepay number 9535688928
-
-## visit my other repository with different admin pages with below link
-https://github.com/PuneethReddyHC/online-shopping-system-advanced
-
-https://github.com/PuneethReddyHC/event-management
-
-##  If you like my project hit a star button
 
 
 
