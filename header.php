@@ -11,7 +11,11 @@ session_start();
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
+<<<<<<< HEAD
 		<title>Smart Food Court</title>
+=======
+		<title>SFCS - Smart Food Court System</title>
+>>>>>>> 59e418b491e39b16d2b74a1ddb863adb7d3c50b8
 
 		<!-- Google font -->
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
@@ -121,8 +125,15 @@ session_start();
 			<!-- TOP HEADER -->
 			<div id="top-header">
 				<div class="container">
+<<<<<<< HEAD
+=======
+					<ul class="header-links pull-left">
+						<li><a href="#"><i class="fa fa-phone"></i> 1900 9001</a></li>
+						<li><a href="#"><i class="fa fa-envelope-o"></i> feedback@vn.SFCS.com</a></li>
+						<li><a href="#"><i class="fa fa-map-marker"></i>Ho Chi Minh</a></li>
+					</ul>
+>>>>>>> 59e418b491e39b16d2b74a1ddb863adb7d3c50b8
 					<ul class="header-links pull-right">
-						<li><a href="#"><i class="fa fa-inr"></i> INR</a></li>
 						<li><?php
                              include "db.php";
                             if(isset($_SESSION["uid"])){
@@ -174,7 +185,11 @@ session_start();
 							<div class="header-logo">
 								<a href="#" class="logo">
 								<font style="font-style:normal; font-size: 33px;color: aliceblue;font-family: serif">
+<<<<<<< HEAD
                                         Smart Food Court
+=======
+                                        SFCS
+>>>>>>> 59e418b491e39b16d2b74a1ddb863adb7d3c50b8
                                     </font>
 									
 								</a>

@@ -211,7 +211,6 @@ span.price {
 						";
 						$i++;
 					}
-					
 				echo'	
 				<input type="hidden" name="total_count" value="'.$total_count.'">
 					<input type="hidden" name="total_price" value="'.$total.'">
