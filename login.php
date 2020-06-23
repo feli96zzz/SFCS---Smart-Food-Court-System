@@ -17,14 +17,15 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
     if(isset($row["user_id"]) and isset($row["first_name"])){
     	$_SESSION["uid"] = $row["user_id"];
 		$_SESSION["name"] = $row["first_name"];
-		$ip_add = getenv("REMOTE_ADDR");
+		//$ip_add = getenv("REMOTE_ADDR");
     }
-    else{
-    	echo "Wrong";
+    elseif(getenv("REMOTE_ADDR")){
+    }
+    else {
+    	echo 'Wrong';
     	die();
     }
-		
-		//we have created a cookie in login_form.php page so if that cookie is available means user is not login
+	//we have created a cookie in login_form.php page so if that cookie is available means user is not login
         
 	//if user record is available in database then $count will be equal to 1
 	if($count == 1){
@@ -58,9 +59,15 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
 			}
 			//if user is login from page we will send login_success
 			echo "login_success";
-				
-            exit;
-
+			$BackToMyPage = $_SERVER['HTTP_REFERER'];
+				if(!isset($BackToMyPage)) {
+					header('Location: '.$BackToMyPage);
+					echo"<script type='text/javascript'>       </script>";
+				} else {
+					//header('Location: index.php'); // default page
+				} 				
+            exit();
+        //if user record not avaiable, this is an admin
 		}else{
                 $email = mysqli_real_escape_string($con,$_POST["email"]);
                 $password =md5($_POST["password"]) ;
@@ -89,7 +96,7 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
                 }
     
 	
-}
+		}
     
 	
 }
