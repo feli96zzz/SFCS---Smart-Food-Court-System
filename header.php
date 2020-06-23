@@ -124,7 +124,7 @@ session_start();
 
 					<ul class="header-links pull-left">
 						<li><a href="#"><i class="fa fa-phone"></i> 1900 9001</a></li>
-						<li><a href="#"><i class="fa fa-envelope-o"></i> feedback@vn.SFCS.com</a></li>
+						<li><a href="#"><i class="fa fa-envelope-o"></i> feedback@vn.BKFC.com</a></li>
 						<li><a href="#"><i class="fa fa-map-marker"></i>Ho Chi Minh</a></li>
 					</ul>
 
@@ -179,7 +179,7 @@ session_start();
 						<div class="col-md-3">
 							<div class="header-logo">
 
-									<a href="http://localhost/online-shopping-system-master/"><img class="tlogo"WIDTH=100 HEIGHT=100 src="img/logoFoodCourt.png" alt=""/></a>
+									<a href="http://localhost/online-shopping-system-master/"><img class="tlogo"WIDTH=100 HEIGHT=100 src="img/logoFoodCourt6.png" alt=""/></a>
 
 						
 							</div>
