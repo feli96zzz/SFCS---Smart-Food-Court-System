@@ -14,9 +14,16 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
 	$run_query = mysqli_query($con,$sql);
 	$count = mysqli_num_rows($run_query);
     $row = mysqli_fetch_array($run_query);
-		$_SESSION["uid"] = $row["user_id"];
+    if(isset($row["user_id"]) and isset($row["first_name"])){
+    	$_SESSION["uid"] = $row["user_id"];
 		$_SESSION["name"] = $row["first_name"];
 		$ip_add = getenv("REMOTE_ADDR");
+    }
+    else{
+    	echo "Wrong";
+    	die();
+    }
+		
 		//we have created a cookie in login_form.php page so if that cookie is available means user is not login
         
 	//if user record is available in database then $count will be equal to 1
@@ -51,17 +58,7 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
 			}
 			//if user is login from page we will send login_success
 			echo "login_success";
-			$BackToMyPage = $_SERVER['HTTP_REFERER'];
-				if(!isset($BackToMyPage)) {
-					header('Location: '.$BackToMyPage);
-					echo"<script type='text/javascript'>
-					
-					</script>";
-				} else {
-					header('Location: index.php'); // default page
-				} 
 				
-			
             exit;
 
 		}else{
