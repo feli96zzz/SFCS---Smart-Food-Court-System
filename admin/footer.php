@@ -4,7 +4,7 @@
             <ul>
               <li>
                 <a href="">
-                  PuneethReddy
+                  Ocean Drive
                 </a>
               </li>
             </ul>
@@ -14,7 +14,7 @@
             <script>
               document.write(new Date().getFullYear())
             </script>, made with <i class="material-icons">favorite</i> by
-            <a href="" target="_blank">Puneethreddy</a> for a better web.
+            <a href="" target="_blank">Ocean Drive</a>
           </div>
           <!-- your footer here -->
         </div>
