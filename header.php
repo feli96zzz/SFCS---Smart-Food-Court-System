@@ -176,11 +176,7 @@ session_start();
 						<!-- LOGO -->
 						<div class="col-md-3">
 							<div class="header-logo">
-								<a href="#" class="logo">
-								<font style="font-style:normal; font-size: 33px;color: aliceblue;font-family: serif">
-                                        SFCS
-                                    </font>
-									
+									<a href="http://localhost/online-shopping-system-master/"><img class="tlogo"WIDTH=100 HEIGHT=100 src="img/logoFoodCourt.png" alt=""/></a>
 								</a>
 							</div>
 						</div>
@@ -192,8 +188,12 @@ session_start();
 								<form>
 									<select class="input-select">
 										<option value="0">All Categories</option>
-										<option value="1">Men</option>
-										<option value="1">Women </option>
+										<option value="1">Noodles</option>
+										<option value="1">Soup</option>
+										<option value="1">Rice</option>
+										<option value="1">Fast foods</option>
+										<option value="1">Beverages</option>
+										<option value="1">Snacks</option>
 									</select>
 									<input class="input" id="search" type="text" placeholder="Search here">
 									<button type="submit" id="search_btn" class="search-btn">Search</button>
