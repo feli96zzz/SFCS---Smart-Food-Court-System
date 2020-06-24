@@ -109,8 +109,7 @@
 		</div>
 		<!-- /SECTION -->
 		  
-		
-
+		<?php /* ====================================CHUA DUNG TOI======================================
 		<!-- SECTION -->
 		<div class="section">
 			<!-- container -->
@@ -208,9 +207,7 @@
 			<!-- /container -->
 		</div>
 		<!-- /SECTION -->
-
-		
-		
+		*/ ?>
 
 
 		<!-- SECTION -->
@@ -219,6 +216,17 @@
 			<div class="container">
 				<!-- row -->
 				<div class="row">
+
+
+
+
+
+
+
+
+
+
+
 					<div class="col-md-4 col-xs-6">
 						<div class="section-title">
 							<h4 class="title">Top selling</h4>
@@ -244,7 +252,7 @@
 									<div class="product-body">
 										<p class="product-category">Category</p>
 										<h3 class="product-name"><a href="#">product name goes here</a></h3>
-										<h4 class="product-price">15000 <del class="product-old-price">$990.00</del></h4>
+										<h4 class="product-price">15000<a class="product-old-price">VNĐ</a></h4>
 									</div>
 								</div>
 								<!-- /product widget -->
@@ -257,7 +265,7 @@
 									<div class="product-body">
 										<p class="product-category">Category</p>
 										<h3 class="product-name"><a href="#">product name goes here</a></h3>
-										<h4 class="product-price">15000 <del class="product-old-price">$990.00</del></h4>
+										<h4 class="product-price">15000<a class="product-old-price">VNĐ</a></h4>
 									</div>
 								</div>
 								<!-- /product widget -->
@@ -270,13 +278,27 @@
 									<div class="product-body">
 										<p class="product-category">Category</p>
 										<h3 class="product-name"><a href="#">product name goes here</a></h3>
-										<h4 class="product-price">15000 <del class="product-old-price">$990.00</del></h4>
+										<h4 class="product-price">15000<a class="product-old-price">VNĐ</a></h4>
 									</div>
 								</div>
 								<!-- product widget -->
 							</div>
 						</div>
 					</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 					<div class="col-md-4 col-xs-6">
 						<div class="section-title">
@@ -296,7 +318,7 @@
 									<div class="product-body">
 										<p class="product-category">Category</p>
 										<h3 class="product-name"><a href="#">product name goes here</a></h3>
-										<h4 class="product-price">15000 <del class="product-old-price">$990.00</del></h4>
+										<h4 class="product-price">15000<a class="product-old-price">VNĐ</a></h4>
 									</div>
 								</div>
 								<!-- /product widget -->
@@ -309,7 +331,7 @@
 									<div class="product-body">
 										<p class="product-category">Category</p>
 										<h3 class="product-name"><a href="#">product name goes here</a></h3>
-										<h4 class="product-price">15000 <del class="product-old-price">$990.00</del></h4>
+										<h4 class="product-price">15000<a class="product-old-price">VNĐ</a></h4>
 									</div>
 								</div>
 								<!-- /product widget -->
@@ -322,7 +344,7 @@
 									<div class="product-body">
 										<p class="product-category">Category</p>
 										<h3 class="product-name"><a href="#">product name goes here</a></h3>
-										<h4 class="product-price">15000 <del class="product-old-price">$990.00</del></h4>
+										<h4 class="product-price">15000<a class="product-old-price">VNĐ</a></h4>
 									</div>
 								</div>
 								<!-- product widget -->
@@ -337,7 +359,7 @@
 									<div class="product-body">
 										<p class="product-category">Category</p>
 										<h3 class="product-name"><a href="#">product name goes here</a></h3>
-										<h4 class="product-price">15000 <del class="product-old-price">$990.00</del></h4>
+										<h4 class="product-price">15000<a class="product-old-price">VNĐ</a></h4>
 									</div>
 								</div>
 								<!-- /product widget -->
@@ -350,7 +372,7 @@
 									<div class="product-body">
 										<p class="product-category">Category</p>
 										<h3 class="product-name"><a href="#">product name goes here</a></h3>
-										<h4 class="product-price">15000 <del class="product-old-price">$990.00</del></h4>
+										<h4 class="product-price">15000<a class="product-old-price">VNĐ</a></h4>
 									</div>
 								</div>
 								<!-- /product widget -->
@@ -363,7 +385,7 @@
 									<div class="product-body">
 										<p class="product-category">Category</p>
 										<h3 class="product-name"><a href="#">product name goes here</a></h3>
-										<h4 class="product-price">15000 <del class="product-old-price">$990.00</del></h4>
+										<h4 class="product-price">15000<a class="product-old-price">VNĐ</a></h4>
 									</div>
 								</div>
 								<!-- product widget -->
@@ -393,7 +415,7 @@
 									<div class="product-body">
 										<p class="product-category">Category</p>
 										<h3 class="product-name"><a href="#">product name goes here</a></h3>
-										<h4 class="product-price">15000 <del class="product-old-price">$990.00</del></h4>
+										<h4 class="product-price">15000<a class="product-old-price">VNĐ</a></h4>
 									</div>
 								</div>
 								<!-- /product widget -->
@@ -406,7 +428,7 @@
 									<div class="product-body">
 										<p class="product-category">Category</p>
 										<h3 class="product-name"><a href="#">product name goes here</a></h3>
-										<h4 class="product-price">15000 <del class="product-old-price">$990.00</del></h4>
+										<h4 class="product-price">15000<a class="product-old-price">VNĐ</a></h4>
 									</div>
 								</div>
 								<!-- /product widget -->
@@ -419,7 +441,7 @@
 									<div class="product-body">
 										<p class="product-category">Category</p>
 										<h3 class="product-name"><a href="#">product name goes here</a></h3>
-										<h4 class="product-price">15000 <del class="product-old-price">$990.00</del></h4>
+										<h4 class="product-price">15000<a class="product-old-price">VNĐ</a></h4>
 									</div>
 								</div>
 								<!-- product widget -->
@@ -434,7 +456,7 @@
 									<div class="product-body">
 										<p class="product-category">Category</p>
 										<h3 class="product-name"><a href="#">product name goes here</a></h3>
-										<h4 class="product-price">15000 <del class="product-old-price">$990.00</del></h4>
+										<h4 class="product-price">15000<a class="product-old-price">VNĐ</a></h4>
 									</div>
 								</div>
 								<!-- /product widget -->
@@ -448,7 +470,7 @@
 									<div class="product-body">
 										<p class="product-category">Category</p>
 										<h3 class="product-name"><a href="#">product name goes here</a></h3>
-										<h4 class="product-price">15000 <del class="product-old-price">$990.00</del></h4>
+										<h4 class="product-price">15000<a class="product-old-price">VNĐ</a></h4>
 									</div>
 								</div>
 								<!-- /product widget -->
@@ -461,7 +483,7 @@
 									<div class="product-body">
 										<p class="product-category">Category</p>
 										<h3 class="product-name"><a href="#">product name goes here</a></h3>
-										<h4 class="product-price">15000 <del class="product-old-price">$990.00</del></h4>
+										<h4 class="product-price">15000<a class="product-old-price">VNĐ</a></h4>
 									</div>
 								</div>
 								<!-- product widget -->
