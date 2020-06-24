@@ -215,6 +215,11 @@ CREATE TABLE `orders_info` (
 INSERT INTO `orders_info`	(`order_id`,`user_id`,`payment`, `time`,`prod_count`,`total_amt`)  VALUES
 (1, 12, 'PaymentAccount', '2020-01-01', 3, 77000);
 
+
+--
+-- Dumping data for table `orders_info`
+--
+
 -- --------------------------------------------------------
 
 --
@@ -275,6 +280,7 @@ INSERT INTO `products` (`product_id`, `product_cat`, `product_brand`, `product_t
 (13, 2, 2, N'Canh khoai sọ (Taro soup)', 1200, 'Colocasia esculenta to be specific', 'tarosoup.jpg', 'canh khoai so'),
 (14, 2, 2, N'Súp cua (Crab soup)', 1400, 'It\'s not as disgusting as it may sound', 'crabsoup.jpg', 'sup cua'),
 (15, 2, 2, N'Súp tóc tiên (Black moss soup)', 1500, 'It\'s black', 'blackmosssoup.jpg', 'sup toc tien'),
+
 (16, 3, 3, 'Com ga hai nam', 35000, 'products_desc', 'com_gahainam.jpg', 'com_ga'),
 (17, 3, 3, 'Com ga xoi mo', 30000, 'products_desc', 'com_gaxoimo.jpg', 'com_ga'),
 (18, 3, 3, 'Com ca loc kho to', 30000, 'products_desc', 'com_calockhoto.jpg', 'com_ca'),
@@ -337,7 +343,7 @@ CREATE TABLE `user_info` (
   `mobile` varchar(10) NOT NULL,
   `address1` varchar(300) NOT NULL,
   `address2` varchar(11) NOT NULL,
-  `balance` INT DEFAULT 0,
+  `balance` INT DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --

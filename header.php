@@ -122,12 +122,6 @@ session_start();
 			<div id="top-header">
 				<div class="container">
 
-					<ul class="header-links pull-left">
-						<li><a href="#"><i class="fa fa-phone"></i> 1900 9001</a></li>
-						<li><a href="#"><i class="fa fa-envelope-o"></i> feedback@vn.BKFC.com</a></li>
-						<li><a href="#"><i class="fa fa-map-marker"></i>Ho Chi Minh</a></li>
-					</ul>
-
 					<ul class="header-links pull-right">
 						<li><?php
                              include "db.php";
@@ -179,7 +173,7 @@ session_start();
 						<div class="col-md-3">
 							<div class="header-logo">
 
-									<a href="http://localhost/online-shopping-system-master/"><img class="tlogo"WIDTH=100 HEIGHT=100 src="img/logoFoodCourt6.png" alt=""/></a>
+									<a href="http://localhost/SFCS---Smart-Food-Court-System"><img class="tlogo"WIDTH=100 HEIGHT=100 src="img/logoFoodCourt.png" alt=""/></a>
 
 						
 							</div>
@@ -318,3 +312,5 @@ session_start();
                         </div>
                       </div>
 		
+	</div>
+</body>
