@@ -123,9 +123,9 @@ session_start();
 				<div class="container">
 
 					<ul class="header-links pull-left">
-						<li><a href="#"><i class="fa fa-phone"></i> 1900 9001</a></li>
-						<li><a href="#"><i class="fa fa-envelope-o"></i> feedback@vn.BKFC.com</a></li>
-						<li><a href="#"><i class="fa fa-map-marker"></i>Ho Chi Minh</a></li>
+						<li><a href="#"><i class="fa fa-phone"></i> 1900 9002</a></li>
+						<li><a href="#"><i class="fa fa-envelope-o"></i> feedback@vn.BKFCS.com</a></li>
+						<li><a href="#"><i class="fa fa-map-marker"></i>Ho Chi Minh city</a></li>
 					</ul>
 
 					<ul class="header-links pull-right">
