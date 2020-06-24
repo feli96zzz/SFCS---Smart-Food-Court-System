@@ -138,7 +138,7 @@ include "header.php";
 								<a class="review-link" href="#review-form">10 Review(s) | Add your review</a>
 							</div>
 							<div>
-								<h3 class="product-price">$'.$row['product_price'].'<del class="product-old-price">$990.00</del></h3>
+								<h3 class="product-price">$'.$row['product_price'].'<data class="product-old-price">VNĐ</data></h3>
 								<span class="product-available">In Stock</span>
 							</div>
 							<p>Food discription</p>
@@ -473,10 +473,6 @@ include "header.php";
 								<a href='product.php?p=$pro_id'><div class='product'>
 									<div class='product-img'>
 										<img src='product_images/$pro_image' style='max-height: 170px;' alt=''>
-										<div class='product-label'>
-											<span class='sale'>-30%</span>
-											<span class='new'>NEW</span>
-										</div>
 									</div></a>
 									<div class='product-body'>
 										<p class='product-category'>$cat_name</p>

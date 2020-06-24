@@ -3,22 +3,32 @@ session_start();
 include "db.php";
 if (isset($_SESSION["uid"])) {
 
-	$f_name = $_POST["firstname"];
-	$email = $_POST['email'];
-	$address = $_POST['address'];
-    $city = $_POST['city'];
-    $state = $_POST['state'];
-    $zip= $_POST['zip'];
-    $cardname= $_POST['cardname'];
-    $cardnumber= $_POST['cardNumber'];
-    $expdate= $_POST['expdate'];
-    $cvv= $_POST['cvv'];
-    $user_id=$_SESSION["uid"];
-    $cardnumberstr=(string)$cardnumber;
+	$payment = $_POST["payment"];
+	$username = $_POST['username'];
+    $password = $_POST['password'];
+    $time = time();
+    $time = date("Y-m-d", $time);
     $total_count=$_POST['total_count'];
+    $user_id=$_SESSION["uid"];
     $prod_total = $_POST['total_price'];
-    
-    
+    echo '<h1>'. '$payment' .'</h1>';
+    if (strcmp($payment, "payment_acc") == 0){
+        $balance_query = "SELECT balance FROM  user_info  WHERE user_id = '$user_id'";
+        $query = mysqli_query($con, $balance_query);
+        $row = mysqli_fetch_array($query);
+        $user_balance = $row["balance"];
+        if ($user_balance < $prod_total){
+            echo "<script type='text/javascript'>alert('Payment failed!');</script>";
+            echo"<script>window.location.href='cart.php'</script>";
+            die();
+        }
+        else{
+            echo "<script type='text/javascript'>alert('Payment is successful!');</script>";
+            $balance_query = "UPDATE TABLE user_info  WHERE user_id = '$user_id' SET balance = balance - '$prod_total'";
+            $query = mysqli_query($con, $balance_query);
+        }
+    }
+
     $sql0="SELECT order_id from `orders_info`";
     $runquery=mysqli_query($con,$sql0);
     if (mysqli_num_rows($runquery) == 0) {
@@ -34,10 +44,8 @@ if (isset($_SESSION["uid"])) {
     }
 
 	$sql = "INSERT INTO `orders_info` 
-	(`order_id`,`user_id`,`f_name`, `email`,`address`, 
-	`city`, `state`, `zip`, `cardname`,`cardnumber`,`expdate`,`prod_count`,`total_amt`,`cvv`) 
-	VALUES ($order_id, '$user_id','$f_name','$email', 
-    '$address', '$city', '$state', '$zip','$cardname','$cardnumberstr','$expdate','$total_count','$prod_total','$cvv')";
+	(`order_id`,`user_id`,`payment`, `time`,`prod_count`,`total_amt`) 
+	VALUES ($order_id, $user_id, '$payment', '$time',$total_count,$prod_total)";
 
 
     if(mysqli_query($con,$sql)){
@@ -78,7 +86,8 @@ if (isset($_SESSION["uid"])) {
         
     }
     
-}else{
+}
+else{
     echo"<script>window.location.href='index.php'</script>";
 }
 	

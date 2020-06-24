@@ -80,21 +80,25 @@ if(isset($_POST["brand"])){
 		echo "</div>";
 	}
 }
+
+$limit = 9;
 if(isset($_POST["page"])){
-	$sql = "SELECT * FROM products";
+
+	$sql = "SELECT * FROM products WHERE product_cat";
 	$run_query = mysqli_query($con,$sql);
 	$count = mysqli_num_rows($run_query);
-	$pageno = ceil($count/9);
+	$pageno = ceil($count / $limit);
+
 	for($i=1;$i<=$pageno;$i++){
-		echo "
-			<li><a href='#product-row' page='$i' id='page' class='active'>$i</a></li>
-            
-            
-		";
+			echo "
+				<li><a href='#product-row' page='$i' id='page' class='active'>$i</a></li>
+	            
+			";
+		
 	}
 }
+
 if(isset($_POST["getProduct"])){
-	$limit = 9;
 	if(isset($_POST["setPage"])){
 		$pageno = $_POST["pageNumber"];
 		$start = ($pageno * $limit) - $limit;
@@ -103,6 +107,7 @@ if(isset($_POST["getProduct"])){
 	}
 	$product_query = "SELECT * FROM products,categories WHERE product_cat=cat_id LIMIT $start,$limit";
 	$run_query = mysqli_query($con,$product_query);
+
 	if(mysqli_num_rows($run_query) > 0){
 		while($row = mysqli_fetch_array($run_query)){
 			$pro_id    = $row['product_id'];
@@ -120,15 +125,11 @@ if(isset($_POST["getProduct"])){
 								<a href='product.php?p=$pro_id'><div class='product'>
 									<div class='product-img'>
 										<img src='product_images/$pro_image' style='max-height: 170px;' alt=''>
-										<div class='product-label'>
-											<span class='sale'>-30%</span>
-											<span class='new'>NEW</span>
-										</div>
 									</div></a>
 									<div class='product-body'>
 										<p class='product-category'>$cat_name</p>
 										<h3 class='product-name header-cart-item-name'><a href='product.php?p=$pro_id'>$pro_title</a></h3>
-										<h4 class='product-price header-cart-item-info'>$pro_price<del class='product-old-price'>Ngan Dong</del></h4>
+										<h4 class='product-price header-cart-item-info'>$pro_price<data class='product-old-price'>VNĐ</data></h4>
 										<div class='product-rating'>
 											<i class='fa fa-star'></i>
 											<i class='fa fa-star'></i>
@@ -186,10 +187,6 @@ if(isset($_POST["get_seleted_Category"]) || isset($_POST["selectBrand"]) || isse
 								<a href='product.php?p=$pro_id'><div class='product'>
 									<div class='product-img'>
 										<img  src='product_images/$pro_image'  style='max-height: 170px;' alt=''>
-										<div class='product-label'>
-											<span class='sale'>-30%</span>
-											<span class='new'>NEW</span>
-										</div>
 									</div></a>
 									<div class='product-body'>
 										<p class='product-category'>$cat_name</p>
@@ -401,7 +398,7 @@ if (isset($_POST["Common"])) {
 									</div>
 									<div class="col-sm-6">
 										<div style="max-width=50px;">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+										<p>Order food</p>
 										</div>
 									</div>
 									

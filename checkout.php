@@ -1,12 +1,27 @@
 <?php
 include "db.php";
 
-include "header.php";
-
-
-                         
+include "header.php";                     
 ?>
 
+<script type="text/javascript">
+    function check_type_payment() {            
+        var radio_check_val = "";
+        for (i = 0; i < document.getElementsByName('payment').length; i++) {
+            if (document.getElementsByName('payment')[i].checked) {
+                radio_check_val = document.getElementsByName('payment')[i].value;        
+            }        
+        }
+        if (radio_check_val === "payment_acc")
+        {
+             document.getElementById("show_onl_pay").style.display = "none";
+        }
+        else
+        {
+         document.getElementById("show_onl_pay").style.display = "block";
+        }
+    }
+</script>
 <style>
 
 .row-checkout {
@@ -23,6 +38,10 @@ include "header.php";
 }
 
 .col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+.col-oneline {
   -ms-flex: 50%; /* IE10 */
   flex: 50%;
 }
@@ -52,7 +71,13 @@ input[type=text] {
   border: 1px solid #ccc;
   border-radius: 3px;
 }
-
+input[type=password] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
 label {
   margin-bottom: 10px;
   display: block;
@@ -70,10 +95,11 @@ label {
   padding: 12px;
   margin: 10px 0;
   border: none;
-  width: 100%;
+  width: 70%;
   border-radius: 3px;
   cursor: pointer;
   font-size: 17px;
+  margin-left:50px;
 }
 
 .checkout-btn:hover {
@@ -114,84 +140,42 @@ span.price {
 		
 		echo'
 			<div class="col-75">
-				<div class="container-checkout">
-				<form id="checkout_form" action="checkout_process.php" method="POST" class="was-validated">
+				<div class="row-checkout">
+				
+					<div class="container-checkout" style="margin-left:50px;width:70%">
+						<form id="checkout_form" action="checkout_process.php" method="POST" class="was-validated" >
 
-					<div class="row-checkout">
-					
-					<div class="col-50">
-						<h3>Billing Address</h3>
-						<label for="fname"><i class="fa fa-user" ></i> Full Name</label>
-						<input type="text" id="fname" class="form-control" name="firstname" pattern="^[a-zA-Z ]+$"  value="'.$row["first_name"].' '.$row["last_name"].'">
-						<label for="email"><i class="fa fa-envelope"></i> Email</label>
-						<input type="text" id="email" name="email" class="form-control" pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9]+(\.[a-z]{2,4})$" value="'.$row["email"].'" required>
-						<label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-						<input type="text" id="adr" name="address" class="form-control" value="'.$row["address1"].'" required>
-						<label for="city"><i class="fa fa-institution"></i> City</label>
-						<input type="text" id="city" name="city" class="form-control" value="'.$row["address2"].'" pattern="^[a-zA-Z ]+$" required>
-
-						<div class="row">
-						<div class="col-50">
-							<label for="state">State</label>
-							<input type="text" id="state" name="state" class="form-control" pattern="^[a-zA-Z ]+$" required>
-						</div>
-						<div class="col-50">
-							<label for="zip">Zip</label>
-							<input type="text" id="zip" name="zip" class="form-control" pattern="^[0-9]{6}(?:-[0-9]{4})?$" required>
-						</div>
-						</div>
-					</div>
-					
-					
-					<div class="col-50">
-						<h3>Payment</h3>
-						<label for="fname">Accepted Cards</label>
-						<div class="icon-container">
-						<i class="fa fa-cc-visa" style="color:navy;"></i>
-						<i class="fa fa-cc-amex" style="color:blue;"></i>
-						<i class="fa fa-cc-mastercard" style="color:red;"></i>
-						<i class="fa fa-cc-discover" style="color:orange;"></i>
-						</div>
+						<div style = "margin-top: 100px; display:inline-block;">
+							<div class="col-50" >
+								<h3>Payment</h3>
+								<label for="cars">Please choose a payment:</label>
+								<input type="radio" id="pay_acc" name="payment" onclick = "check_type_payment()" value="payment_acc">
+								<label for="male">Payment Account</label>
+								<input type="radio" id="pay_onl" name="payment" onclick="check_type_payment()" value="payment_online" checked>
+								<label for="female">Online Payment</label>				
+							</div>
+							</div>
 						
-						
-						<label for="cname">Name on Card</label>
-						<input type="text" id="cname" name="cardname" class="form-control" pattern="^[a-zA-Z ]+$" required>
-						
-						<div class="form-group" id="card-number-field">
-                        <label for="cardNumber">Card Number</label>
-                        <input type="text" class="form-control" id="cardNumber" name="cardNumber" required>
-                    </div>
-						<label for="expdate">Exp Date</label>
-						<input type="text" id="expdate" name="expdate" class="form-control" pattern="^((0[1-9])|(1[0-2]))\/(\d{2})$" placeholder="12/22"required>
-						
+							<div style = "margin-left: 250px; display:inline-block;">
+							<div class="col-50" id = "show_onl_pay">
+								<h3>Online Payment</h3>
+								<label for="fname">Accepted Online Services</label>
+								<div class="icon-container">
+								<i class="fa fa-cc-visa" style="color:navy;"></i>
+								<i class="fa fa-cc-amex" style="color:blue;"></i>
+								<i class="fa fa-cc-mastercard" style="color:red;"></i>
+								<i class="fa fa-cc-discover" style="color:orange;"></i>
+								</div>
+									<label for="cname">Username</label>
+									<input type="text" id="payment_username" name="username" placeholder="username">
+									<label for="ccnum">Password</label>
+									<input type="password" id="payment_password" name="password" placeholder="password">
+								</div>
+							</div>
+							</div>
+				   ';
 
-						<div class="row">
-						
-						<div class="col-50">
-							<div class="form-group CVV">
-								<label for="cvv">CVV</label>
-								<input type="text" class="form-control" name="cvv" id="cvv" required>
-						</div>
-						</div>
-					</div>
-					</div>
-					</div>
-					<label><input type="CHECKBOX" name="q" class="roomselect" value="conform" required> Shipping address same as billing
-					</label>';
-
-					// add something
-						// <form action="./checkout.php">
-						//   <label for="Payment">Choose Paymen method:</label>
-						//   <select name="Method" id="Payment">
-						//     <option value="acount">Acount</option>
-						//     <option value="online">Online</option>
-						//   </select>
-						//   <br><br>
-						//   <input type="submit" value="Submit">
-						// </form>
-
-
-					// 
+			
 					$i=1;
 					$total=0;
 					$total_count=$_POST['total_count'];
@@ -290,39 +274,6 @@ span.price {
 		</div>
 	</div>
 </section>
-		<div id="newsletter" class="section">
-			<!-- container -->
-			<div class="container">
-				<!-- row -->
-				<!-- <div class="row">
-					<div class="col-md-12">
-						<div class="newsletter">
-							<p>Sign Up for the <strong>NEWSLETTER</strong></p>
-							<form >
-								<input class="input" type="email" placeholder="Enter Your Email">
-								<button class="newsletter-btn"><i class="fa fa-envelope"></i> Subscribe</button>
-							</form>
-							<ul class="newsletter-follow">
-								<li>
-									<a href="#"><i class="fa fa-facebook"></i></a>
-								</li>
-								<li>
-									<a href="#"><i class="fa fa-twitter"></i></a>
-								</li>
-								<li>
-									<a href="#"><i class="fa fa-instagram"></i></a>
-								</li>
-								<li>
-									<a href="#"><i class="fa fa-pinterest"></i></a>
-								</li>
-							</ul>
-						</div>
-					</div> -->
-				</div>
-				<!-- /row -->
-			</div>
-			<!-- /container -->
-		</div>
 		
 <?php
 include "footer.php";
